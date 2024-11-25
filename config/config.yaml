@@ -1,0 +1,35 @@
+# config.yaml
+
+paths:
+  data_raw: "./data/raw/"
+  data_processed_meteorologicas_dataframes_gribs: "data/processed/meteorologicas/dataframes_gribs"
+  data_raw_serfor_alertas: "data/raw/serfor/alertas"
+  data_processed_serfor_alertas: "data/processed/serfor/alertas"
+  data_grids: "data/raw/meteorologicas/gribs"
+  data_grids_aux: "data/raw/meteorologicas/gribsAux"
+  output_meteorological: "output/grids_meteorologicas"
+  output_serfor: "output/grids_output"
+  data_input_model_acortado: "data/raw/modelo/csv/inputAcortado.csv"
+  data_input_model: "data/raw/modelo/csv/input.csv"
+  data_input_model_path: "data/raw/modelo/csv"
+  data_prueba_imagen: "data/raw/modelo/imagenesPrueba"
+  
+model:
+  learning_rate: 0.001
+  batch_size: 32
+  epochs: 50
+
+config:
+  meteorological_variables:
+    - "u10"
+    - "v10"
+    - "t2m"
+    - "lai_hv"
+    - "sp"
+  lat_min: -10.375
+  lat_max: -16.125
+  long_min: -74.625
+  long_max: -69.875
+  grid_shape:
+    - 23
+    - 19
